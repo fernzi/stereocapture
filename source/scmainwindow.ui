@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SCMainWindow</class>
+ <widget class="QMainWindow" name="SCMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StereoCapture</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="SCViewFinder" name="cameraView">
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QToolButton" name="captureButton">
+        <property name="text">
+         <string>Capture</string>
+        </property>
+        <property name="icon">
+         <iconset theme="camera-photo"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QComboBox" name="lCameraSelector"/>
+      </item>
+      <item>
+       <widget class="QComboBox" name="rCameraSelector"/>
+      </item>
+      <item>
+       <widget class="QToolButton" name="reloadButton">
+        <property name="text">
+         <string>Reload Cameras</string>
+        </property>
+        <property name="icon">
+         <iconset theme="reload"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="startButton">
+        <property name="text">
+         <string>Start Viewfinder</string>
+        </property>
+        <property name="icon">
+         <iconset theme="media-playback-start"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SCViewFinder</class>
+   <extends>QGraphicsView</extends>
+   <header>widgets/scviewfinder.hh</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

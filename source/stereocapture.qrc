@@ -1,0 +1,6 @@
+<!DOCTYPE RCC>
+<RCC>
+  <qresource prefix="/sc/image">
+    <file alias="noise">../data/noise.png</file>
+  </qresource>
+</RCC>
